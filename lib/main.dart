@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:timer/next_page.dart';
+import 'package:timer/work.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,7 +41,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-
   }
 
   @override
@@ -70,8 +70,14 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(onPressed: () {
               resetTimer();
             },
-              child: Text("Riset",
-                style: TextStyle(color: Colors.black),),
+              child: const Text("Riset",
+                style: TextStyle(color: Colors.blue),),
+            ),
+            ElevatedButton(onPressed: () {
+              Navigator.push(context,MaterialPageRoute(builder: (context) => WorkPage()));
+            },
+              child: const Text("宿題",
+                style: TextStyle(color: Colors.red),),
             ),
           ],
         ),
